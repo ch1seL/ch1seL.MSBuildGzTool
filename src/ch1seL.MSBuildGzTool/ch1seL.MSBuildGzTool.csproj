@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>        
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Authors>ch1seL</Authors>
+        <PackageVersion>1.0.9</PackageVersion>        
+        <PackageId>ch1seL.MSBuildGzTool</PackageId>
+        <PackageTags>MSBuild;Tasks;GZip;UnGzip</PackageTags>
+        <Description>
+            # ch1seL.MSBuildGzTool
+            Provide MsBuild Tasks to Gzip and UnGzip files
+
+            ch1seL.MSBuildGzTool.Gzip
+            Parameters: SourceFile, DestinationFile
+
+            ch1seL.MSBuildGzTool.UnGzip
+            Parameters: SourceFile, DestinationFile
+        </Description>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <BuildOutputTargetFolder>tasks</BuildOutputTargetFolder>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build.Framework" Version="15.1.1012" />
+        <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.1.1012" />
+        <PackageReference Include="NuGet.Build.Tasks.Pack" Version="5.8.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Update="@(PackageReference)" PrivateAssets="All" />
+    </ItemGroup>
+    <ItemGroup>
+    <!-- pack the props files -->
+        <Content Include="build\ch1seL.MSBuildGzTool.props" PackagePath="build\" />
+    </ItemGroup>
+
+</Project>
