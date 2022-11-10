@@ -17,10 +17,10 @@ namespace ch1seL.MSBuildGzTool
             while ((i = zipStream.Read(tempBytes, 0, tempBytes.Length)) != 0) fOutStream.Write(tempBytes, 0, i);
             return true;
         }
-        
+
         // ReSharper disable once MemberCanBePrivate.Global
-        [Required]
-        public string SourceFile { get; set; }
+        [Required] public string SourceFile { get; set; }
+
         [Required]
         // ReSharper disable once MemberCanBePrivate.Global
         public string DestinationFile { get; set; }

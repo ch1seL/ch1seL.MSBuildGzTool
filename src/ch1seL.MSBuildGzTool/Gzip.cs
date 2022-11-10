@@ -18,10 +18,10 @@ namespace ch1seL.MSBuildGzTool
 
             return true;
         }
-        
+
         // ReSharper disable once MemberCanBePrivate.Global
-        [Required]
-        public string SourceFile { get; set; }
+        [Required] public string SourceFile { get; set; }
+
         [Required]
         // ReSharper disable once MemberCanBePrivate.Global
         public string DestinationFile { get; set; }

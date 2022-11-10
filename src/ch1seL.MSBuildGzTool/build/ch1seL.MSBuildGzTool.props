@@ -1,9 +1,9 @@
 ﻿<Project TreatAsLocalProperty="TaskAssembly">
 
-  <PropertyGroup>
-    <TaskAssembly>$(MSBuildThisFileDirectory)..\tasks\netstandard2.1\ch1seL.MSBuildGzTool.dll</TaskAssembly>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TaskAssembly>$(MSBuildThisFileDirectory)..\tasks\netstandard2.1\ch1seL.MSBuildGzTool.dll</TaskAssembly>
+    </PropertyGroup>
 
-  <UsingTask TaskName="ch1seL.MSBuildGzTool.UnGzip" AssemblyFile="$(TaskAssembly)" />
-  <UsingTask TaskName="ch1seL.MSBuildGzTool.Gzip" AssemblyFile="$(TaskAssembly)" />
+    <UsingTask TaskName="ch1seL.MSBuildGzTool.UnGzip" AssemblyFile="$(TaskAssembly)" />
+    <UsingTask TaskName="ch1seL.MSBuildGzTool.Gzip" AssemblyFile="$(TaskAssembly)" />
 </Project>

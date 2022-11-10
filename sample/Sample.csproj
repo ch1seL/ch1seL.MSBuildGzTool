@@ -6,7 +6,7 @@
 
     <UsingTask TaskName="ch1seL.MSBuildGzTool.UnGzip" AssemblyFile="C:\Users\ch1seL\repos\ch1seL\ch1seL.MSBuild.Helpers\src\ch1seL.MSBuildGzTool\bin\Debug\netstandard2.1\ch1seL.MSBuildGzTool.dll" />
     <Target Name="UnGzip" AfterTargets="CopyFilesToOutputDirectory">
-        <UnGzip SourceFile="tonclient.gz" DestinationFile="tonclient.dll"/>
+        <UnGzip SourceFile="tonclient.gz" DestinationFile="tonclient.dll" />
     </Target>
-    
+
 </Project>
