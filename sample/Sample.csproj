@@ -2,9 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
-    <UsingTask TaskName="ch1seL.MSBuildGzTool.UnGzip" AssemblyFile="C:\Users\ch1seL\repos\ch1seL\ch1seL.MSBuild.Helpers\src\ch1seL.MSBuildGzTool\bin\Debug\netstandard2.1\ch1seL.MSBuildGzTool.dll" />
+    <UsingTask TaskName="ch1seL.MSBuildGzTool.UnGzip" AssemblyFile="$(MSBuildProjectDirectory)\..\src\ch1seL.MSBuildGzTool\bin\Debug\netstandard2.1\ch1seL.MSBuildGzTool.dll" />
     <Target Name="UnGzip" AfterTargets="CopyFilesToOutputDirectory">
         <UnGzip SourceFile="tonclient.gz" DestinationFile="tonclient.dll" />
     </Target>
