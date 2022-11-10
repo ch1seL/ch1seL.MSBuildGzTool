@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Authors>ch1seL</Authors>
-        <PackageVersion>1.0.9</PackageVersion>
+        <PackageVersion>1.2.0</PackageVersion>
         <PackageId>ch1seL.MSBuildGzTool</PackageId>
         <PackageTags>MSBuild;Tasks;GZip;UnGzip</PackageTags>
         <Description>
@@ -33,7 +33,8 @@
     </ItemGroup>
     <ItemGroup>
         <!-- pack the props files -->
-        <Content Include="build\ch1seL.MSBuildGzTool.props" PackagePath="build\" />
+        <Content Include="build\*" PackagePath="build\" />
+        <Content Include="buildMultiTargeting\*" PackagePath="buildMultiTargeting\" />
     </ItemGroup>
 
 </Project>
